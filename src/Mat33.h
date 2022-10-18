@@ -13,8 +13,8 @@
 #include <string>
 
 /******************************************************************************
-* CONSTANTS *******************************************************************
-******************************************************************************/
+ * CONSTANTS *******************************************************************
+ ******************************************************************************/
 
 namespace
 {
@@ -22,10 +22,9 @@ constexpr unsigned int INDENT_MULT = 2;
 constexpr unsigned int NUM_COLS = 3;
 } // namespace
 
-
 /******************************************************************************
-* Mat33 Class *****************************************************************
-******************************************************************************/
+ * Mat33 Class *****************************************************************
+ ******************************************************************************/
 
 class Mat33
 {
@@ -37,7 +36,7 @@ class Mat33
 
   /**
    * @brief Create a deep copy from another Mat33 object.
-   * 
+   *
    * @param other The other Mat33 to copy.
    */
   Mat33(const Mat33& other)
@@ -49,7 +48,7 @@ class Mat33
 
   /**
    * @brief Copy assignment operator for deep copy of another Mat33.
-   * 
+   *
    * @param other The other Mat33 to copy.
    * @return Mat33& The copied object.
    */
@@ -69,7 +68,7 @@ class Mat33
   /**
    * @brief Transpose the matrix data in place. This looks
    * like the following:
-   * 
+   *
    * [[v0.x, v1.x, v2.x]        [[v0.x, v0.y, v0.z]
    *  [v0.y, v1.y, v2.y]   =>    [v1.x, v1.y, v1.z]
    *  [v0.z, v1.z, v2.z]         [v2.x, v2.y, v2.z]
@@ -85,8 +84,9 @@ class Mat33
   }
 
   /**
-   * @brief Print the matrix data, optionally indented based on the level specified.
-   * 
+   * @brief Print the matrix data, optionally indented based on the level
+   * specified.
+   *
    * @param stream The stream to print to.
    * @param indentLevel The indentation level.
    */
@@ -94,8 +94,8 @@ class Mat33
              const unsigned int indentLevel = 0) const
   {
     const std::string indent = indentString(indentLevel);
-    // TODO: FUTURE WORK- find max element width and use setw to keep all column widths aligned
-    // https://cplusplus.com/forum/beginner/275937/
+    // TODO: FUTURE WORK- find max element width and use setw to keep all column
+    // widths aligned https://cplusplus.com/forum/beginner/275937/
     stream << indent << col[0].x << ", " << col[1].x << ", " << col[2].x
            << std::endl;
     stream << indent << col[0].y << ", " << col[1].y << ", " << col[2].y
