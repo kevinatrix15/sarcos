@@ -1,3 +1,10 @@
+/**
+ * @file Main.h
+ * @brief Demonstration of solution to the coding quiz problems.
+ * @author Kevin Briggs <kevinabriggs@hotmail.com>
+ * @version 1
+ * @date 2022-10-18
+ */
 #include "Mat33.h"
 #include "Node.h"
 #include "Vec3.h"

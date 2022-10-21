@@ -20,7 +20,7 @@ TEST_CASE("Mat33 assignment matches inputs", "[ctor]")
   Vec3 v2{7.0, 8.0, 9.0};
 
   // act
-  Mat33 m({v0, v1, v2});
+  Mat33 m(v0, v1, v2);
   const auto cols = m.get();
 
   // assert
@@ -38,7 +38,7 @@ TEST_CASE("Matrix transpose of identity matrix appears unchanged",
   Vec3 v2{0.0, 0.0, 1.0};
 
   // act
-  Mat33 I({v0, v1, v2});
+  Mat33 I(v0, v1, v2);
   I.transpose();
   const auto cols = I.get();
 
@@ -57,7 +57,7 @@ TEST_CASE("Matrix transpose of unique matrix matches pre-calculated",
   Vec3 v2{7.0, 8.0, 9.0};
 
   // act
-  Mat33 m({v0, v1, v2});
+  Mat33 m(v0, v1, v2);
   m.transpose();
   const auto cols = m.get();
 
@@ -85,7 +85,7 @@ TEST_CASE(
   Vec3 v2{7.0, 8.0, 9.0};
 
   // act
-  Mat33 m0({v0, v1, v2});
+  Mat33 m0(v0, v1, v2);
   Mat33 m1 = m0;
   m1.transpose();
 

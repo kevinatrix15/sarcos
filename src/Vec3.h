@@ -42,6 +42,4 @@ class Vec3
   {
     return x == other.x && y == other.y && z == other.z;
   }
-
-  private:
 };
